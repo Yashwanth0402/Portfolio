@@ -1,0 +1,76 @@
+/* About Section */
+.about-section {
+  padding: 250px 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+/* Title with Fade-in/Out Animation */
+.about-title {
+  font-size: 3rem;
+  margin-bottom: 100px;
+  color: white;
+  font-weight: bold;
+  margin-top: -100px; /* Moves the title up */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Fade-in when visible */
+.about-title.fade-in {
+  opacity: 1;
+  transform: translateY(0); /* Normal position */
+}
+
+/* Fade-out when not visible */
+.about-title.fade-out {
+  opacity: 0;
+  transform: translateY(-20px); /* Slightly moves up when fading out */
+}
+
+/* About Container */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* About Text */
+.about-text {
+  width: 50%;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: white;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* About Photo */
+.about-photo {
+  width: 40%;
+  max-width: 400px;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text,
+  .about-photo {
+    width: 80%;
+  }
+}

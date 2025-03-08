@@ -1,0 +1,120 @@
+/* Research Section */
+.research-section {
+  padding: 200px 20px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.research-title {
+  font-size: 3rem;
+  margin-bottom: 100px;
+  color: white;
+  font-weight: bold;
+  margin-top: -50px;
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.research-title.fade-in {
+  opacity: 1;
+}
+
+.research-title.fade-out {
+  opacity: 0;
+}
+
+/* Research Containers */
+.research-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin-bottom: 80px;
+}
+
+/* Second Research Container */
+.research-container2 {
+  flex-direction: row-reverse; /* Flip the order for text on left, spline on right */
+}
+
+/* Text Section */
+.research-text {
+  width: 50%;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: white;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.research-text.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Spline Container */
+.research-spline {
+  width: 40%;
+  height: 300px;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.research-spline.fade-in {
+  opacity: 1;
+}
+
+.research-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  margin-left:10px;
+}
+
+.research-link:hover {
+  color: #ccc; /* Light gray on hover */
+}
+
+.research-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #ff6600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.research-button:hover {
+  background-color: #cc5500;
+}
+
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .research-container,
+  .research-container2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .research-text,
+  .research-spline {
+    width: 90%;
+    text-align: center;
+  }
+
+  .research-spline {
+    height: 200px;
+  }
+}
