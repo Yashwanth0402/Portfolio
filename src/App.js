@@ -54,7 +54,7 @@ function App() {
             <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
           </ul>
         </nav>
-        <spline-viewer url="/assets/hello_1.spline"></spline-viewer>
+        <spline-viewer url="https://prod.spline.design/ha2TgK1mZVgYhkdv/scene.splinecode"></spline-viewer>
       </div>
 
       {/* About Section */}
