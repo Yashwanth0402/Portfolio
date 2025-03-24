@@ -34,7 +34,7 @@ function App() {
      {showWarning && (
         <div className="warning-popup">
           <div className="warning-box">
-            <p>For the best experience, please rotate the screen into landscape or open this site on an iPad or a larger screen.</p>
+            <p>For the best experience, please open this site on an iPad or a larger screen.</p>
             <div className="warning-buttons">
               <button onClick={() => setShowWarning(false)}>Continue</button>
               <button onClick={() => window.location.href = "https://www.google.com"}>Exit</button>
