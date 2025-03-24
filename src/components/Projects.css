@@ -129,27 +129,29 @@ header a {
 /* Thumbnails */
 .thumbnail {
     position: absolute;
-    bottom: 40px;
+    bottom: 20px; /* Ensure it stays at the bottom */
     left: 50%;
-    transform: translateX(-50%);
-    width: max-content;
-    z-index: 100;
+    transform: translateX(-50%); /* Center thumbnails horizontally */
     display: flex;
-    gap: 15px;
+    gap: 15px; /* Space between the thumbnails */
+    z-index: 100;
 }
 
+/* For each thumbnail item */
 .thumbnail .item {
-    width: 120px;
-    height: 180px;
+    width: 120px; /* Width of each thumbnail */
+    height: 180px; /* Height of each thumbnail */
     flex-shrink: 0;
     position: relative;
+    border-radius: 15px;
 }
 
+/* Thumbnail images */
 .thumbnail .item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
+    object-fit: cover; /* Ensure images cover the area of the thumbnail */
+    border-radius: 15px; /* Round corners of the thumbnails */
 }
 
 /* Arrows */
@@ -227,14 +229,9 @@ header a {
         font-size: 1rem;
     }
 
+    /* Remove thumbnails on smaller screens */
     .thumbnail {
-        bottom: 20px;
-        gap: 10px;
-    }
-
-    .thumbnail .item {
-        width: 90px;
-        height: 130px;
+        display: none;
     }
 
     .arrows {
@@ -248,5 +245,13 @@ header a {
     .arrows button {
         width: 40px;
         height: 40px;
+    }
+}
+
+/* Landscape Mode for Small Devices */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    /* Remove thumbnails in landscape mode for smaller devices */
+    .thumbnail {
+        display: none !important;
     }
 }
